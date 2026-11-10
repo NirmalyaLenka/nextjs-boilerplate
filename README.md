@@ -1,79 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Starter
 
-## Getting Started
+A minimal **Next.js App Router** starter built with TypeScript, React, and Tailwind CSS. The repository currently contains the default Create Next App landing page; it is a starting point for a custom application, not a finished product.
 
-First, run the development server:
+## Overview
+
+- **Framework:** Next.js 15
+- **Language:** TypeScript
+- **UI:** React 19 and Tailwind CSS 4
+- **Routing:** Next.js App Router
+- **Typography:** Geist and Geist Mono through `next/font`
+- **Package manager:** npm (the committed `package-lock.json` keeps installs reproducible)
+
+## Requirements
+
+- Node.js 20 LTS recommended
+- npm (included with Node.js)
+
+## Run locally
+
+Clone the repository and enter its directory:
 
 ```bash
+git clone https://github.com/NirmalyaLenka/nextjs-boilerplate.git
+cd nextjs-boilerplate
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). Edit `app/page.tsx` and save to see changes during development.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the local development server with Turbopack |
+| `npm run build` | Create a production build |
+| `npm run start` | Serve the production build (run `npm run build` first) |
+| `npm run lint` | Run the lint command configured in `package.json` |
 
-## Learn More
+Run the production build before deployment. The commands above are documented from the package manifest; they have **not** been represented as passing CI checks in this documentation update.
 
-To learn more about Next.js, take a look at the following resources:
+## Repository map
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```text
+nextjs-boilerplate/
+├── app/
+│   ├── favicon.ico       # Browser tab icon
+│   ├── globals.css       # Global styles and Tailwind entry point
+│   ├── layout.tsx        # Root layout, fonts, and page metadata
+│   └── page.tsx          # Current home page / primary editing point
+├── public/
+│   ├── file.svg          # Starter illustration asset
+│   ├── globe.svg         # Starter illustration asset
+│   ├── next.svg          # Next.js logo asset
+│   ├── vercel.svg        # Vercel logo asset
+│   └── window.svg        # Starter illustration asset
+├── .gitignore            # Files excluded from version control
+├── next.config.ts        # Next.js configuration
+├── package.json          # Dependencies and npm scripts
+├── package-lock.json     # Locked npm dependency tree
+├── postcss.config.mjs    # PostCSS / Tailwind integration
+├── tsconfig.json         # TypeScript compiler configuration
+└── README.md             # Setup, structure, and maintenance notes
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Where to make changes
 
-## Deploy on Vercel
+- **Page content and layout:** `app/page.tsx`
+- **Global styling:** `app/globals.css`
+- **Site-wide metadata and fonts:** `app/layout.tsx`
+- **Static assets:** `public/`
+- **Framework configuration:** `next.config.ts`
+- **Dependencies and commands:** `package.json`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Keep route-specific pages and components in `app/` as the application grows. Add separate `components/`, `lib/`, or `public/images/` directories only when the project needs them; they are not present in the current tree.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Current scope and limitations
 
+- The home page is still the default starter screen.
+- No product-specific features, API routes, authentication, database, or automated test suite are currently documented as implemented.
+- No hardware, firmware, or bill of materials applies to this web starter.
+- Before treating this as a production application, replace the starter content and metadata, define the application's requirements, add tests and CI checks, and review dependency/security posture.
 
----
+## Deployment
 
-## Skills & technologies
+Build locally with `npm run build`, then deploy to a Node.js-compatible host or [Vercel](https://vercel.com/). Review the [Next.js deployment guide](https://nextjs.org/docs/app/building-your-application/deploying) and configure environment variables in the deployment platform rather than committing secrets.
 
-`TypeScript` · `HTML/CSS`
+## Skills and technologies
 
+![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss)
 
-## Repository structure
+## Maintenance & audit
 
-Key files and folders (not exhaustive):
-
-- `.gitignore`
-- `README.md`
-- `app/favicon.ico`
-- `app/globals.css`
-- `app/layout.tsx`
-- `app/page.tsx`
-- `next.config.ts`
-- `package-lock.json`
-- `package.json`
-- `postcss.config.mjs`
-- `public/file.svg`
-- `public/globe.svg`
-- `public/next.svg`
-- `public/vercel.svg`
-- `public/window.svg`
-- `tsconfig.json`
-
-
-## How it works
-
-The project includes a package manifest. Check its scripts and dependencies before running; use the exact command defined in the manifest.
-
-
-## Maintenance & Audit
-
-- **Audit date:** 10 November 2026
-- **Documentation status:** README reviewed and audit record added on this date.
-- **Scope and evidence:** This entry records a documentation-level maintenance pass. It does not by itself establish that source code compiles, dependencies are current, security has been tested, or hardware/runtime behavior has been verified.
-- **Code and tests:** No new functional code changes or test results are claimed by this README update. Run the project-specific build, test, and hardware/runtime checks before relying on it.
-- **Maintenance baseline:** Documentation status recorded through 10 November 2026; revisit dependencies, setup instructions, known limitations, and tests whenever the project changes.
+- **Last updated:** 10 November 2026
+- **Review scope:** README accuracy, setup instructions, package scripts, and repository paths.
+- **Changes in this pass:** Documentation refreshed to match the current starter files. Application code and dependencies were not changed.
+- **Verification:** No build, lint, automated test, or deployment run was performed as part of this documentation-only pass. Do not interpret this date as a verified release or production-readiness claim.
+- **Next review:** Recheck the documented commands and dependency versions when application code or the package manifest changes.
