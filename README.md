@@ -38,6 +38,38 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ---
 
+## Skills & technologies
+
+`TypeScript` · `HTML/CSS`
+
+
+## Repository structure
+
+Key files and folders (not exhaustive):
+
+- `.gitignore`
+- `README.md`
+- `app/favicon.ico`
+- `app/globals.css`
+- `app/layout.tsx`
+- `app/page.tsx`
+- `next.config.ts`
+- `package-lock.json`
+- `package.json`
+- `postcss.config.mjs`
+- `public/file.svg`
+- `public/globe.svg`
+- `public/next.svg`
+- `public/vercel.svg`
+- `public/window.svg`
+- `tsconfig.json`
+
+
+## How it works
+
+The project includes a package manifest. Check its scripts and dependencies before running; use the exact command defined in the manifest.
+
+
 ## Maintenance & Audit
 
 - **Audit date:** 10 November 2026
