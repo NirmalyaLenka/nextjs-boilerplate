@@ -97,7 +97,7 @@ Build locally with `npm run build`, then deploy to a Node.js-compatible host or 
 
 ## Maintenance & audit
 
-- **Last updated:** 11 November 2026
+- **Last updated:** 14 November 2026
 - **Review scope:** README accuracy, setup instructions, package scripts, and repository paths.
 - **Changes in this pass:** Documentation refreshed to match the current starter files. Application code and dependencies were not changed.
 - **Verification:** No build, lint, automated test, or deployment run was performed as part of this documentation-only pass. Do not interpret this date as a verified release or production-readiness claim.
