@@ -99,6 +99,6 @@ Build locally with `npm run build`, then deploy to a Node.js-compatible host or 
 
 - **Last updated:** 14 November 2026
 - **Review scope:** README accuracy, setup instructions, package scripts, and repository paths.
-- **Changes in this pass:** Documentation refreshed to match the current starter files. Application code and dependencies were not changed.
+- **Changes in this pass:** Added a documented limitation for the `next lint` script because the package manifest does not declare `eslint` or `eslint-config-next`. Application code and dependencies were not changed.
 - **Verification:** No build, lint, automated test, or deployment run was performed as part of this documentation-only pass. Do not interpret this date as a verified release or production-readiness claim.
 - **Next review:** Recheck the documented commands and dependency versions when application code or the package manifest changes.
