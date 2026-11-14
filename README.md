@@ -40,6 +40,8 @@ Open [http://localhost:3000](http://localhost:3000). Edit `app/page.tsx` and sav
 
 Run the production build before deployment. The commands above are documented from the package manifest; they have **not** been represented as passing CI checks in this documentation update.
 
+**Lint-script limitation:** `package.json` defines `npm run lint` as `next lint`, but the manifest does not declare `eslint` or `eslint-config-next`. The lint command may therefore fail in a clean install until the lint tooling is configured. This was identified from the manifest; the command was not executed, and no dependencies were changed.
+
 ## Repository map
 
 ```text
